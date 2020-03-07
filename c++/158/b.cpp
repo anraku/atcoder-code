@@ -11,7 +11,7 @@ int main() {
   ll n, a, b;
   cin >> n >> a >> b;
 
-  ll ans = a * floor(n / (a + b));
+  ll ans = a * (n / (a + b));
 
   ll div = n % (a + b);
   if (div < a) {
