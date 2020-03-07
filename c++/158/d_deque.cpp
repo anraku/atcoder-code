@@ -13,8 +13,7 @@ int main() {
   bool flip = false;
   int query;
   cin >> query;
-  rep(qi, query)
-  {
+  rep(qi, query){
     int ty;
     cin >> ty;
     if (ty == 1) {
@@ -32,8 +31,7 @@ int main() {
       }
     }
   }
-  if (flip)
-    reverse(q.begin(), q.end());
+  if (flip) reverse(q.begin(), q.end());
   string ans;
   for (char c : q)
     ans += c;
