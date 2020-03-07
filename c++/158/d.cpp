@@ -8,23 +8,24 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 
-  string s;
-  cin >> s;
+  char ch[10000];
+  scanf("%s", ch);
+  string s = string(ch);
   int n;
-  cin >> n;
+  scanf("%d", &n);
   int q, f;
-  string c;
+  char c;
   rep(i, n)
   {
-    cin >> q;
+    scanf("%d %d %s", &q, &f, &c);
     if (q == 1) {
       reverse(s.begin(), s.end());
     } else {
-      cin >> f >> c;
-      if (f == 1) {
-        s.insert(0, c);
+      if (f == 1)
+      {
+        s = c + s;
       } else {
-        s.append(c);
+        s += c;
       }
     }
   }
