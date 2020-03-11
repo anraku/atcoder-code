@@ -12,20 +12,19 @@ int main() {
   cin >> n >> q;
   string s;
   cin >> s;
-  vector<pair<int, int>> p(q);
   vector<int> arr(n+1);
-  rep (i, q)
-    cin >> p[i].first >> p[i].second;
   
-  int count = 0;
   rep (i, n-1){
     if(s.substr(i,2) == "AC")
-      count++;
-    arr[i+1] = count;
+      arr[i+1] = arr[i] + 1;
+    else
+      arr[i+1] = arr[i];
   }
 
   rep(i, q) {
-    int ans = arr[p[i].second-1] - arr[p[i].first-1];
-    cout << ans << endl;
+    int l, r;
+    cin >> l >> r;
+    l--; r--;
+    cout << arr[r] - arr[l] << endl;
   }
 }
